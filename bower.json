@@ -1,6 +1,6 @@
 {
   "name": "jquery-sortable",
-  "version": "0.9.13",
+  "version": "0.9.13-patch1",
   "homepage": "http://johnny.github.io/jquery-sortable/",
   "authors": [
     "Jonas von Andrian"
