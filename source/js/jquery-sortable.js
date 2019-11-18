@@ -283,11 +283,19 @@
       box = this.sameResultBox,
       t = this.options.tolerance
 
-      if(!box || box.top - t > p.top || box.bottom + t < p.top || box.left - t > p.left || box.right + t < p.left)
+      if(!box || box.top - t > p.top || box.bottom + t < p.top || box.left - t > p.left || box.right + t < p.left){
         if(!this.searchValidTarget()){
           this.placeholder.detach()
           this.lastAppendedItem = undefined
         }
+      }else{
+        var newTop =  $(document).scrollTop();
+        if(e.clientY>($(window).height()-this.item[0].offsetHeight)){
+          $(document).scrollTop(newTop + this.item[0].offsetHeight);
+         }else if(e.clientY<this.item[0].offsetHeight){
+         $(document).scrollTop(newTop - this.item[0].offsetHeight/2);
+         }
+      }
     },
     drop: function  (e) {
       this.toggleListeners('off')
