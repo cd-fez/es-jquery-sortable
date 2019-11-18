@@ -290,10 +290,11 @@
         }
       }else{
         var newTop =  $(document).scrollTop();
-        if(e.clientY>($(window).height()-this.item[0].offsetHeight)){
-          $(document).scrollTop(newTop + this.item[0].offsetHeight);
-         }else if(e.clientY<this.item[0].offsetHeight){
-         $(document).scrollTop(newTop - this.item[0].offsetHeight/2);
+        var itemHeight=this.item[0].offsetHeight;
+        if(e.clientY>($(window).height()-itemHeight)){
+          $(document).scrollTop(newTop + itemHeight);
+         }else if(e.clientY<itemHeight){
+          $(document).scrollTop(newTop - itemHeight/2);
          }
       }
     },
