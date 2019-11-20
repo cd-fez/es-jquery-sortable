@@ -291,6 +291,7 @@
       }else{
         var newTop =  $(document).scrollTop();
         var itemHeight=this.item[0].offsetHeight;
+        
         if(e.clientY>($(window).height()-itemHeight)){
           $(document).scrollTop(newTop + itemHeight);
          }else if(e.clientY<itemHeight){

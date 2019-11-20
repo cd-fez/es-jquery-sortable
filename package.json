@@ -1,6 +1,6 @@
 {
   "name": "es-jquery-sortable",
-  "version": "0.9.13-patch1",
+  "version": "0.9.13-patch2",
   "description": "jquery plugin for sortable, nestable lists",
   "main": "./source/js/jquery-sortable.js",
   "scripts": {
