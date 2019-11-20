@@ -283,11 +283,21 @@
       box = this.sameResultBox,
       t = this.options.tolerance
 
-      if(!box || box.top - t > p.top || box.bottom + t < p.top || box.left - t > p.left || box.right + t < p.left)
+      if(!box || box.top - t > p.top || box.bottom + t < p.top || box.left - t > p.left || box.right + t < p.left){
         if(!this.searchValidTarget()){
           this.placeholder.detach()
           this.lastAppendedItem = undefined
         }
+      }else{
+        var newTop =  $(document).scrollTop();
+        var itemHeight=this.item[0].offsetHeight;
+        
+        if(e.clientY>($(window).height()-itemHeight)){
+          $(document).scrollTop(newTop + itemHeight);
+         }else if(e.clientY<itemHeight){
+          $(document).scrollTop(newTop - itemHeight/2);
+         }
+      }
     },
     drop: function  (e) {
       this.toggleListeners('off')
