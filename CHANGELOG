@@ -2,7 +2,7 @@
 		support window scrolling when dragging
 
 		改动PR:
-
+		https://github.com/cd-fez/es-jquery-sortable/pull/1
 
 [0.9.13-patch1] 2018.7.18
 		 support touch device
